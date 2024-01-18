@@ -1,0 +1,670 @@
+<app-component></app-component>
+
+<!-- {# Banner section #} -->
+<div id="home" class="banner-area section-padding">
+    <div class="bg-overlay black"></div>
+    <div class="containter">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="welcome-text">
+                    <img src="../../assets/profile/profile.png" alt="Profile image" style="height: 150px;width: 150px;">
+                    <br><br>
+                    <div class="name-area wow fadeInDown typewriter" data-wow-delay="1.5s">Hey There 👋, I am a Full
+                        Stack Developer</div>
+                    <h4 class="wow fadeInDown advocate" data-wow-delay="4.8s">An advocate for "Everything as Code"</h4>
+                    <a href="#about" class="my-btn-1 wow fadeInDown" data-wow-delay="5.5s">Learn more</a>
+                    <a href="#contact" class="my-btn-2 wow fadeInDown" data-wow-delay="5.5s">Get in touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- {# About section #} -->
+<div id="about" class="about-area" style="padding: 40px 0px 0px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-left">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="line"></div>
+                    <h6></h6>
+                    <p>{{ about.description }}</p>
+                    <a href="../../assets/about/pooja-resume.png" download="pooja-resume">
+                        Download CV <i class="fa fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5 visible-md visible-lg wow fadeInDown" data-wow-delay="0.6s"
+                style="margin-top: -50% !important;">
+                <div class="profile" style="padding-bottom: -5px;">
+                    <img src="{{ about.image.url }}" alt="Profile image" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- {# Tech stack Section #} -->
+<div id="tech-stack" class="tech-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2 class="tech">My tech stack</h2>
+                    <br>
+                    <div class="container-fluid sub-title">
+                        <p>My tech stack reflects not only my technical proficiency but also my commitment to delivering
+                            high-quality solutions. Whether it's creating responsive and elegant front-end interfaces or
+                            architecting scalable back-end systems, I approach each project with a passion for
+                            innovation and a dedication to best practices in software development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row top-space">
+            {% for service in services %}
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
+                    <img src="{{ service.image.url }}" alt="service">
+                    <h2>{{ service.name }}</h2>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- {# Experience section #} -->
+<div id="experience" class="portfolio-area" style="padding: 40px 0px 0px 0px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>Experience</h2>
+                    <br>
+                    <div class="container-fluid sub-title">
+                        <p>In 2020, I embarked on a journey to kickstart my career in Angular, a popular open-source
+                            frontend application development toolkit. Motivated by a passion for web development and a
+                            desire to stay at the forefront of technology, I dedicated myself to learning and applying
+                            my knowledge in various contexts.
+
+                            Now, as I continue to apply my knowledge and experience, I strive to stay abreast of the
+                            latest developments in the Full Stack ecosystem. My journey from a budding enthusiast in
+                            2020 to a seasoned Full stack developer reflects not only my dedication to personal and
+                            professional growth but also the ever-evolving landscape of technology that keeps me engaged
+                            and passionate about what I do.</p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="timeline">
+                        <!-- # 1 -->
+                        <div class="edu-container left-container">
+                            <img src="../../assets/experience/li_cycle_logo.jpg">
+                            <div class="text-box wow fadeInLeft" data-wow-delay="0.2s">
+                                <h5 class="section-title">ERP Support (Co-op)</h5>
+                                <b>
+                                    <p>Li-Cycle Corp.</p>
+                                    <p>Information Technology</p>
+                                    <p>Oct 2023 - Nov 2024</p>
+                                </b>
+                                <hr>
+                                <pre>
+● Managed user roles, permissions, and access controls, ensuring data security and compliance with company policies.
+● Provide ongoing support, maintenance, and troubleshooting through the ticketing system.
+● Proficiently utilized MS Office tools and internal tools to create and extract reports.
+</pre>
+                                <span class="left-container-arrow"></span>
+                            </div>
+                        </div>
+
+                        <!-- # 2 -->
+                        <div class="edu-container right-container">
+                            <img src="../../assets/experience/k2ai_logo.jpg" width="50" height="50">
+                            <div class="text-box wow fadeInRight" data-wow-delay="0.2s">
+                                <h5 class="section-title">Full Stack Developer</h5>
+                                <b>
+                                    <p>K2AI Analytics Pvt Ltd</p>
+                                    <p>Information Technology</p>
+                                    <p>June 2022 - Dec 2022</p>
+                                </b>
+                                <hr>
+                                <pre>
+● Collaborated in an agile team on AI platform projects, contributing expertise in Angular and Django.
+● Manage complex database interactions using Django ORM and PostgreSQL databases.
+● Utilized Git, Bitbucket, Jira, Swagger, and Postman for version control and collaboration.
+● Integrated 14+ REST APIs daily, utilizing MongoDB for data management and E-charts with PrimeNG.
+</pre>
+                                <span class="right-container-arrow"></span>
+                            </div>
+                        </div>
+
+                        <!-- # 3 -->
+                        <div class="edu-container left-container">
+                            <img src="../assets/experience/woodiewin_logo.jpg">
+                            <div class="text-box wow fadeInLeft" data-wow-delay="0.2s">
+                                <h5 class="section-title">Full Stack Developer</h5>
+                                <b>
+                                    <p>Woodiewin Technologies Pvt Ltd</p>
+                                    <p>Information Technology</p>
+                                    <p>Aug 2021 - June 2022</p>
+                                </b>
+                                <hr>
+                                <pre>
+● Design, develop, test and maintain backend components using Django and Python. 
+● Built and maintained 30+ robust REST APIs with Django REST Framework.
+● Assisted in troubleshooting and debugging to deliver reliable and optimized software solutions.
+● Presented, documented, and maintained product increments, technical documents and guides.
+</pre>
+                                <span class="left-container-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="edu-container right-container">
+                            <img src="../../assets/experience/oprezo.jpg">
+                            <div class="text-box wow fadeInRight" data-wow-delay="0.2s">
+                                <h5 class="section-title">Web Developer</h5>
+                                <b>
+                                    <p>Oprezo India Pvt Ltd</p>
+                                    <p>Information Technology</p>
+                                    <p>Jan 2020 - Jul 2021</p>
+                                </b>
+                                <hr>
+                                <pre>
+● Participate in all phases of the development lifecycle, including requirements analysis, 
+design, development, testing, deployment, and support.
+● Generated over 50+ lazy loading modules and reusable and tested components with distributed systems.
+● Led the end-to-end development of a robust and feature-rich core banking system application,
+focusing on the administration and authorization module to streamline internal processes
+</pre>
+                                <span class="right-container-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+<!-- {# Recent Works Section #} -->
+<div id="projects" class="portfolio-area section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>My Recent Works</h2>
+                    <br>
+                    <div class="container-fluid sub-title">
+                        <p>I am thrilled to announce the successful completed and deployed Projects in Django and
+                            Angular. These
+                            projects represents a significant milestone in my journey as a developer, showcasing my
+                            skills as a software developer using Python, Angular, MongoDB, PostgreSQL, etc. By utilizing
+                            these technologies, the applications
+                            achieves cross-platform compatibility, running seamlessly on the web.
+
+                            The development of these projects has been a continuous journey of learning and growth. It
+                            provided me an opportunity to dive deep into problem-solving and logical capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wow fadeInDown" data-wow-delay="0.2s">
+            <div class="col-md-12">
+                {% for work in works %}
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="gallery-items" style="border: 2px solid #a2a2a2">
+                        <a class="view img" href="{{ work.image.url }}" title="click to zoom">
+                            <img src="{{ work.image.url }}" alt="work image"
+                                style="height: 100% !important; width: 100%;">
+                        </a>
+
+                        <div class="gallery-text">
+                            <h2>{{ work.title }}</h2>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+    <div></div>
+</div>
+
+<!-- {# Education section #} -->
+<div id="education" class="portfolio-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>Education</h2>
+                    <br>
+                    <div class="container-fluid sub-title">
+                        <p>I am delighted to announce the successful culmination of my post-degree education, a
+                            momentous achievement that symbolizes the peak of my academic journey. This accomplishment
+                            underscores not only my unwavering dedication to the pursuit of knowledge but also the
+                            culmination of rigorous academic endeavors in the dynamic field. Education stands as an
+                            invaluable beacon, illuminating the path to personal and professional growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wow fadeInDown col" data-wow-delay="0.2s">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <!-- <div class="col-md-12"> -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <img src="../assets/education/lambton.png"
+                                                    style="border-radius: 50%;border: 1px solid black;height: 65px !important;width: 65px !important;"
+                                                    class="img-responsive" alt="Li-Cycle Corporation">
+                                            </div>
+                                            <br>
+                                            <div class="col-12">
+                                                <h5 class="section-title">Lambton College of Applied Arts & Technology
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Full Stack Software Development</p>
+                                    <p>Information Technology</p>
+                                    <p>JAN 2023 - AUG 2024</p>
+                                    <p>CGPA - 4.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <img src="../assets/education/rtmnu.jpg"
+                                                    style="border-radius: 50%;border: 1px solid black;height: 65px !important;width: 65px !important;"
+                                                    class="img-responsive" alt="Li-Cycle Corporation">
+                                            </div>
+                                            <br>
+                                            <div class="col-12">
+                                                <h5 class="section-title">Rashtrasant Tukdoji Maharaj Nagpur University
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Master of Computer Application (MCA)</p>
+                                    <p>Information Technology</p>
+                                    <p>JUNE 2019 - MAY 2021</p>
+                                    <p>CGPA - 4.8</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <img src="../assets/education/rtmnu.jpg"
+                                                    style="border-radius: 50%;border: 1px solid black;height: 65px !important;width: 65px !important;"
+                                                    class="img-responsive" alt="Li-Cycle Corporation">
+                                            </div>
+                                            <br>
+                                            <div class="col-12">
+                                                <h5 class="section-title">Rashtrasant Tukdoji Maharaj Nagpur University
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Bachelor of Computer Application</p>
+                                    <p>Information Technology</p>
+                                    <p>JUNE 2016 - MAY 2019</p>
+                                    <p>CGPA - 4.5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+    <div></div>
+</div>
+
+<br>
+<div></div>
+<div></div>
+</div>
+
+</div>
+
+<!-- {# Certifications section #} -->
+<div class="invitation-area">
+    <div class="container-fluid">
+        <!-- <div class="row">
+                <div class="text-center"> -->
+        <div class="row text-center">
+            <div class="col-md-12">
+                <div style="margin: 60px 0px;">
+                    <h2 style="color: #fff;">Certifications</h2>
+                    <br>
+                    <div class="container-fluid sub-title" style="padding-bottom: 30px;">
+                        <p style="color:#fff;">I have been awarded for academic excellence by educational institutions,
+                            training providers, ond organizations for successfully demonstrated knowledge and skills in
+                            IT field. These official documents showcases my achievements for carrying significant
+                            implications for personal and professional development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row wow fadeInDown certification" data-wow-delay="0.2s">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <a class="view img" href="../../assets/certification/1.jpg" title="click to zoom">
+                                        <img src="../../assets/certification/3.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <a class="view img" href="../../assets/certification/2.jpg" title="click to zoom">
+                                        <img src="../../assets/certification/2.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <a class="view img" href="../../assets/certification/3.jpg" title="click to zoom">
+                                        <img src="../../assets/certification/1.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-12">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <a class="view img" href="../../assets/certification/4.jpg" title="click to zoom">
+                                        <img src="../../assets/certification/4.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+            </div>
+        </div>
+
+
+        <div></div>
+        <div></div>
+        <!-- </div> 
+            </div> -->
+    </div>
+</div>
+
+<!-- {# Tech Notes section #} -->
+<div id="tech_notes" class="portfolio-area" style="padding:30px 0px 20px 0px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>Tech Notes</h2>
+                    <br>
+                    <div class="container-fluid sub-title">
+                        <p>I love creating content as a hobby! It's a fantastic outlet for my creativity, and I enjoy
+                            expressing myself and connecting with people who share my interests. I have a blog where I
+                            can share my written ideas, and a vlog where my voice can be heard. It's a great way to
+                            connect with others and share my passion for technology and all things digital. Join me on
+                            this exciting journey of exploration and discovery in the tech world!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wow fadeInDown" data-wow-delay="0.2s">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div>
+                                                <img src="../assets/profile/profile.png"
+                                                    style="border-radius: 50%;border: 1px solid black;height: 65px !important;width: 65px !important;"
+                                                    class="img-responsive" alt="Li-Cycle Corporation">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h5 class="section-title">Tech Notes by Pooja | Blog</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>Embark on a journey of discovery and exploration.</p>
+                                    <small>2023 Sep - Present</small>
+                                    <br>
+                                    <small>Welcome to my tech blog, where I share my tech notes! As a passionate tech
+                                        enthusiast, I'm always on the lookout for the latest and most innovative
+                                        advancements in the industry, and I can't wait to share my findings with you. In
+                                        this space, we'll dive deep into a variety of exciting tech topics, ranging from
+                                        revolutionary software solutions to groundbreaking ideas and futuristic
+                                        concepts. Along the way, I'll share my personal experiences and provide insights
+                                        on how these developments impact our world. Join me on this exciting journey of
+                                        discovery and exploration in the dynamic world of technology!</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="panel panel-danger">
+                                <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div>
+                                                <img src="../assets/profile/profile.png"
+                                                    style="border-radius: 50%;border: 1px solid black;height: 65px !important;width: 65px !important;"
+                                                    class="img-responsive" alt="Li-Cycle Corporation">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h5 class="section-title">Tech Notes by Pooja | Vlog</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>Exploring the frontiers of the computer world.</p>
+                                    <small>Coming Soon</small>
+                                    <br>
+                                    <small>Welcome to my vlog, where we'll be exploring the fascinating world of
+                                        technology! Technology is constantly evolving and transforming the world we live
+                                        in, creating new paths and opportunities for us to explore. In this vlog, I'll
+                                        be sharing my personal journey of discovery and exploration in the tech world,
+                                        as I learn about the latest advancements and emerging trends in the industry.
+                                        From cutting-edge software and innovative solutions to groundbreaking ideas and
+                                        futuristic concepts, we'll cover it all in this vlog. So join me on this
+                                        exciting journey as we discover the ever-changing world of technology
+                                        together!</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+    <div></div>
+</div>
+
+
+<!-- {# Contact section #} -->
+<div id="contact" class="contact-area" style="padding-bottom:40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2>Contact Me</h2>
+                    <br>
+                    <div class="container-fluid sub-title">
+                        <p>Hey! I appreciate you looking at my public profile. Please feel free to ask me anything or to
+                            discuss anything with me. I'm happy to chat with and meet new people. Regardless of the fact
+                            that I don't use social ../assets much, you can find me there. So find me and get in touch
+                            with
+                            me. Send me an email if you need to discuss anything serious with me. I'll get back to you
+                            in 12 to 24 hours.</p>
+                    </div>
+                </div>
+                <div class="text-center highlight-text">
+                    <h5 style="text-transform: lowercase !important;">Send me an email at <a class="highlight"
+                            onclick="copyToClipboard('dayaramanipooja123@gmail.com')"
+                            title="Click here to copy email to clipboard"> <span class="highlight">
+                                <u>dayaramanipooja123@gmail.com</u>
+                                <div class="tooltip-box" id="tooltipBox">Copied to clipboard!</div>
+                            </span>
+                        </a>
+                    </h5>
+
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/PoojaDayaramani219" target="_blank" class="social-link"
+                        title="https://github.com/PoojaDayaramani219">
+                        <img src="../assets/profile/github.png" style="cursor: pointer;">
+                    </a>
+
+                    <!-- LinkedIn Link -->
+                    <a href="https://www.linkedin.com/in/pooja-dayaramani/" target="_blank" class="social-link"
+                        title="https://www.linkedin.com/in/pooja-dayaramani/">
+                        <img src="../assets/profile/linkedin.png" style="cursor: pointer;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 box-contact-form">
+                    
+                    <form id="contact-form" method="post">
+                        {% csrf_token %}
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group wow fadeInDown" data-wow-delay="0.2s">
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                               placeholder="Enter your full name *" required="required"
+                                               data-error="Fullname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group wow fadeInDown" data-wow-delay="0.4s">
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                               placeholder="Enter your email *" required="required"
+                                               data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="0.6s">
+                                        <textarea id="form_message" name="message" class="form-control"
+                                                  placeholder="Your Message *" rows="4" required="required"
+                                                  data-error="Leave a message for me"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-send" type="submit" value="">Send message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form> 
+
+                </div>
+
+            </div> -->
+    </div>
+</div>
+
+<style>
+    .highlight {
+        color: #FF0000;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .highlight:hover {
+        transform: translateY(-5px);
+    }
+
+    .certification .panel-body {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .certification .panel-body:hover {
+        transform: scale(1.10);
+        /* Adjust the scale factor as needed */
+    }
+
+    .certification img {
+        display: block;
+        width: 100%;
+        height: 20%;
+        /* height: auto; */
+    }
+
+    .hover-link {
+        display: none;
+        color: #007bff;
+        cursor: pointer;
+    }
+
+    .tooltip-box {
+        position: absolute;
+        top: 90%;
+        left: 70%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        display: none;
+        padding: 5px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+    }
+</style>

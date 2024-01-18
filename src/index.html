@@ -1,13 +1,131 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Portfolio</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../assets/profile/profile.png">
+  <title>Pooja Dayaramani</title>
+
+  <!-- styles -->
+
+  <!--Theme Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700,800" rel="stylesheet">
+
+  <!--Bootstrap css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/bootstrap.min.css">
+
+  <!--Font Awesome css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/font-awesome.min.css">
+
+  <!--Font Awesome css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/animate.css">
+
+  <!--Owl carousel css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/owl.carousel.css">
+  <link rel="stylesheet" href="portfolio/src/static/css/owl.theme.default.css">
+
+  <!--Magnific popup css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/magnific-popup.css">
+
+  <!--icon css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/line-icons.min.css">
+
+  <!--Template css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/style.css">
+
+  <!--Template css-->
+  <link rel="stylesheet" href="portfolio/src/static/css/responsive.css">
+
 </head>
+
 <body>
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
   <app-root></app-root>
+
+  <!-- Scripts -->
+  <!--Latest version JQuery-->
+  <script src="portfolio/src/static/jsjs/jquery.min.js"></script>
+
+  <!--Bootstrap js-->
+  <script src="portfolio/src/static/jsjs/bootstrap.min.js"></script>
+
+  <!--easing js-->
+  <script src="portfolio/src/static/jsjs/jquery.easing.min.js"></script>
+
+  <!--mixitup js-->
+  <script src="portfolio/src/static/jsjs/jquery.magnific-popup.js"></script>
+
+  <!--Owl Carousel js-->
+  <script src="portfolio/src/static/jsjs/owl.carousel.js"></script>
+
+  <!--Validator js-->
+  <script src="portfolio/src/static/jsjs/validator.js"></script>
+
+  <!--Contact js-->
+  <script src="portfolio/src/static/jsjs/contact.js"></script>
+
+
+  <!--Bootstrap js-->
+  <script src="portfolio/src/static/jsjs/wow.min.js"></script>
+
+  <!--Theme js-->
+  <script src="portfolio/src/static/jsjs/main.js"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // Show or hide the button based on scroll position
+      window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      // Smooth scroll to top when the button is clicked
+      scrollToTopBtn.addEventListener("click", function () {
+        scrollToTop(0, 2000); // Adjust the duration (in milliseconds) as needed
+      });
+
+      function scrollToTop(targetPosition, duration) {
+        const startPosition = window.scrollY || document.documentElement.scrollTop;
+        const distance = targetPosition - startPosition;
+        const startTime = performance.now();
+
+        function animation(currentTime) {
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          const easeInOutCubic = progress < 0.5 ? 4 * progress ** 3 : 1 - Math.pow(-2 * progress + 2, 3) / 2; window.scrollTo(0,
+            startPosition + distance * easeInOutCubic); if (timeElapsed < duration) { requestAnimationFrame(animation); }
+        }
+        requestAnimationFrame(animation);
+      }
+    });
+
+    function copyToClipboard(text) {
+      const input = document.createElement('textarea');
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+
+      // Show tooltip
+      const tooltipBox = document.getElementById('tooltipBox');
+      tooltipBox.style.display = 'block';
+      setTimeout(() => {
+        tooltipBox.style.display = 'none';
+      }, 2000); // Hide the tooltip after 2 seconds
+    }
+  </script>
 </body>
+
 </html>
